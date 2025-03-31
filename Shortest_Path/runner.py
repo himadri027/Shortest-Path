@@ -2,11 +2,18 @@ import sys
 from Maze import *
 from show import *
 from Algorithm import *
-import os
 import pygame
+from flask import Flask
 
-# Disable sound 
-os.environ["SDL_AUDIODRIVER"] = "dummy
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, this is the output of my Shortest Path script!"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
+
 
 pygame.init()
 size = width, height = 600, 600
