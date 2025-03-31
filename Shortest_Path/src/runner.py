@@ -2,6 +2,11 @@ import sys
 from Maze import *
 from show import *
 from Algorithm import *
+import os
+import pygame
+
+# Disable sound 
+os.environ["SDL_AUDIODRIVER"] = "dummy
 
 pygame.init()
 size = width, height = 600, 600
